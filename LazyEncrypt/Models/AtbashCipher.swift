@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AtbashCipher {
+class AtbashCipher: TextEncyption {
     var englishAlphabet: [Character] = Array("abcdefghijklmnopqrstuvwxyz")
     var russianAlphabet: [Character] = Array("абвгдеёжзийклмнопрстуфхцчшщъыьэюя")
     var englishAlphabetReversed: [Character]
@@ -22,18 +22,18 @@ class AtbashCipher {
         var result: String = ""
         for item in data {
             if let engIndex = englishAlphabet.firstIndex(of: Character(item.lowercased())){
-                result.append(englishAlphabetReversed[engIndex])
+                result.append(item.isUppercase ? Character(englishAlphabetReversed[engIndex].uppercased()) : englishAlphabetReversed[engIndex] )
                 continue
             }
             if let ruIndex = russianAlphabet.firstIndex(of: Character(item.lowercased())){
-                result.append(russianAlphabetReversed[ruIndex])
+                result.append(item.isUppercase ? Character(russianAlphabetReversed[ruIndex].uppercased()) : russianAlphabetReversed[ruIndex])
                 continue
             }
             result.append(item)
         }
         return result
     }
-    func DecryptText(data: String) {
-        EncryptText(data: data)
+    func DecryptText(data: String) -> String {
+        return EncryptText(data: data)
     }
 }

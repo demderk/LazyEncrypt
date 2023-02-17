@@ -9,15 +9,19 @@
 /* Begin PBXBuildFile section */
 		30448EA7299B9C850071BCC5 /* SidebarCollapse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */; };
 		30829360299CD11D0096752A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3082935E299CD11D0096752A /* Localizable.strings */; };
-		30829363299CD2890096752A /* AtbashCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829362299CD2890096752A /* AtbashCipherView.swift */; };
-		30829365299CD2E30096752A /* AtbashCipherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829364299CD2E30096752A /* AtbashCipherVM.swift */; };
+		30829363299CD2890096752A /* EncryptedTextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829362299CD2890096752A /* EncryptedTextEditView.swift */; };
+		30829365299CD2E30096752A /* EncryptedTextEditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829364299CD2E30096752A /* EncryptedTextEditVM.swift */; };
 		30829367299CDF4A0096752A /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829366299CDF4A0096752A /* RoundedCornersShape.swift */; };
 		3082936F299D246C0096752A /* LazyEncryptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082936E299D246C0096752A /* LazyEncryptTests.swift */; };
-		30829376299D25860096752A /* AtbashCipherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829375299D25860096752A /* AtbashCipherModel.swift */; };
+		30829376299D25860096752A /* AtbashCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829375299D25860096752A /* AtbashCipher.swift */; };
 		30909E7C2991FC4D004599AF /* Crypt1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30909E7B2991FC4D004599AF /* Crypt1App.swift */; };
 		30909E7E2991FC4D004599AF /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30909E7D2991FC4D004599AF /* MainWindow.swift */; };
 		30909E802991FC50004599AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30909E7F2991FC50004599AF /* Assets.xcassets */; };
 		30909E832991FC50004599AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30909E822991FC50004599AF /* Preview Assets.xcassets */; };
+		30A05CD4299F3914008BD072 /* TextEncyption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CD3299F3914008BD072 /* TextEncyption.swift */; };
+		30A05CD6299F44A7008BD072 /* CesarsCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CD5299F44A7008BD072 /* CesarsCipher.swift */; };
+		30A05CDA299F4CEF008BD072 /* CesarsCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */; };
+		30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */; };
 		30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */; };
 		30B26861299CBF7500A3C2A2 /* SelectedViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */; };
 		30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */; };
@@ -36,18 +40,22 @@
 /* Begin PBXFileReference section */
 		30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCollapse.swift; sourceTree = "<group>"; };
 		3082935F299CD11D0096752A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		30829362299CD2890096752A /* AtbashCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherView.swift; sourceTree = "<group>"; };
-		30829364299CD2E30096752A /* AtbashCipherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherVM.swift; sourceTree = "<group>"; };
+		30829362299CD2890096752A /* EncryptedTextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTextEditView.swift; sourceTree = "<group>"; };
+		30829364299CD2E30096752A /* EncryptedTextEditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTextEditVM.swift; sourceTree = "<group>"; };
 		30829366299CDF4A0096752A /* RoundedCornersShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		3082936C299D246C0096752A /* LazyEncryptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyEncryptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3082936E299D246C0096752A /* LazyEncryptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyEncryptTests.swift; sourceTree = "<group>"; };
-		30829375299D25860096752A /* AtbashCipherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherModel.swift; sourceTree = "<group>"; };
+		30829375299D25860096752A /* AtbashCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipher.swift; sourceTree = "<group>"; };
 		30909E782991FC4D004599AF /* LazyEncrypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyEncrypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30909E7B2991FC4D004599AF /* Crypt1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypt1App.swift; sourceTree = "<group>"; };
 		30909E7D2991FC4D004599AF /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
 		30909E7F2991FC50004599AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30909E822991FC50004599AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30909E842991FC50004599AF /* LazyEncrypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyEncrypt.entitlements; sourceTree = "<group>"; };
+		30A05CD3299F3914008BD072 /* TextEncyption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEncyption.swift; sourceTree = "<group>"; };
+		30A05CD5299F44A7008BD072 /* CesarsCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipher.swift; sourceTree = "<group>"; };
+		30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherView.swift; sourceTree = "<group>"; };
+		30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherVM.swift; sourceTree = "<group>"; };
 		30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewItem.swift; sourceTree = "<group>"; };
 		30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewGroup.swift; sourceTree = "<group>"; };
 		30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowVM.swift; sourceTree = "<group>"; };
@@ -134,7 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				30909E7D2991FC4D004599AF /* MainWindow.swift */,
-				30829362299CD2890096752A /* AtbashCipherView.swift */,
+				30829362299CD2890096752A /* EncryptedTextEditView.swift */,
+				30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,7 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */,
-				30829364299CD2E30096752A /* AtbashCipherVM.swift */,
+				30829364299CD2E30096752A /* EncryptedTextEditVM.swift */,
+				30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -153,7 +163,9 @@
 			children = (
 				30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */,
 				30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */,
-				30829375299D25860096752A /* AtbashCipherModel.swift */,
+				30829375299D25860096752A /* AtbashCipher.swift */,
+				30A05CD3299F3914008BD072 /* TextEncyption.swift */,
+				30A05CD5299F44A7008BD072 /* CesarsCipher.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,14 +284,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30829365299CD2E30096752A /* AtbashCipherVM.swift in Sources */,
-				30829363299CD2890096752A /* AtbashCipherView.swift in Sources */,
+				30829365299CD2E30096752A /* EncryptedTextEditVM.swift in Sources */,
+				30829363299CD2890096752A /* EncryptedTextEditView.swift in Sources */,
+				30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */,
 				30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */,
 				30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */,
 				30829367299CDF4A0096752A /* RoundedCornersShape.swift in Sources */,
-				30829376299D25860096752A /* AtbashCipherModel.swift in Sources */,
+				30829376299D25860096752A /* AtbashCipher.swift in Sources */,
 				30909E7E2991FC4D004599AF /* MainWindow.swift in Sources */,
 				30909E7C2991FC4D004599AF /* Crypt1App.swift in Sources */,
+				30A05CD4299F3914008BD072 /* TextEncyption.swift in Sources */,
+				30A05CD6299F44A7008BD072 /* CesarsCipher.swift in Sources */,
+				30A05CDA299F4CEF008BD072 /* CesarsCipherView.swift in Sources */,
 				30448EA7299B9C850071BCC5 /* SidebarCollapse.swift in Sources */,
 				30B26861299CBF7500A3C2A2 /* SelectedViewGroup.swift in Sources */,
 			);

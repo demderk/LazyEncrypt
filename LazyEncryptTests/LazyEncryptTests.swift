@@ -30,6 +30,7 @@ final class AtbashTests: XCTestCase {
         XCTAssertEqual(result, "яюэьыъщшчцхфутсрпонмлкйизжёедгвба")
     }
     
+    
     func testAtbashEnglishRussian() throws {
         let testClass = AtbashCipher()
         let result = testClass.EncryptText(data: "abcdefghijklmnopqrstuvwxyzабвгдеёжзийклмнопрстуфхцчшщъыьэюя")
@@ -42,4 +43,28 @@ final class AtbashTests: XCTestCase {
         XCTAssertEqual(result, "z7y5x")
     }
 
+    func testAtbashEnglishCapitalize() throws {
+        let testClass = AtbashCipher()
+        let result = testClass.EncryptText(data: "AbC")
+        XCTAssertEqual(result, "ZyX")
+    }
+
+    func testAtbashRussianCapitalize() throws {
+        let testClass = AtbashCipher()
+        let result = testClass.EncryptText(data: "АбВ")
+        XCTAssertEqual(result, "ЯюЭ")
+    }
+    
+    func testCesarsRussianWikipedia() throws{
+        let testClass = CesarsCipher(3)
+        let result = testClass.EncryptText(data: "Съешь же ещё этих мягких французских булок да выпей чаю.")
+        XCTAssertEqual(result, "Фэзыя йз зьи ахлш пвёнлш чугрщцкфнлш дцосн жг еютзм ъгб.")
+    }
+    
+    func testCesarsRussianDecrypt() throws{
+        let testClass = CesarsCipher(3)
+        let result = testClass.DecryptText(data: "где")
+        XCTAssertEqual(result, "абв")
+    }
+    
 }
