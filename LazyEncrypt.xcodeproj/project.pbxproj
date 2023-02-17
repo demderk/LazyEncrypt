@@ -1,0 +1,560 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30448EA7299B9C850071BCC5 /* SidebarCollapse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */; };
+		30829360299CD11D0096752A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3082935E299CD11D0096752A /* Localizable.strings */; };
+		30829363299CD2890096752A /* AtbashCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829362299CD2890096752A /* AtbashCipherView.swift */; };
+		30829365299CD2E30096752A /* AtbashCipherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829364299CD2E30096752A /* AtbashCipherVM.swift */; };
+		30829367299CDF4A0096752A /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829366299CDF4A0096752A /* RoundedCornersShape.swift */; };
+		3082936F299D246C0096752A /* LazyEncryptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082936E299D246C0096752A /* LazyEncryptTests.swift */; };
+		30829376299D25860096752A /* AtbashCipherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829375299D25860096752A /* AtbashCipherModel.swift */; };
+		30909E7C2991FC4D004599AF /* Crypt1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30909E7B2991FC4D004599AF /* Crypt1App.swift */; };
+		30909E7E2991FC4D004599AF /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30909E7D2991FC4D004599AF /* MainWindow.swift */; };
+		30909E802991FC50004599AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30909E7F2991FC50004599AF /* Assets.xcassets */; };
+		30909E832991FC50004599AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30909E822991FC50004599AF /* Preview Assets.xcassets */; };
+		30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */; };
+		30B26861299CBF7500A3C2A2 /* SelectedViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */; };
+		30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30829370299D246C0096752A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30909E702991FC4D004599AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30909E772991FC4D004599AF;
+			remoteInfo = LazyEncrypt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCollapse.swift; sourceTree = "<group>"; };
+		3082935F299CD11D0096752A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		30829362299CD2890096752A /* AtbashCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherView.swift; sourceTree = "<group>"; };
+		30829364299CD2E30096752A /* AtbashCipherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherVM.swift; sourceTree = "<group>"; };
+		30829366299CDF4A0096752A /* RoundedCornersShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		3082936C299D246C0096752A /* LazyEncryptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyEncryptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3082936E299D246C0096752A /* LazyEncryptTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyEncryptTests.swift; sourceTree = "<group>"; };
+		30829375299D25860096752A /* AtbashCipherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherModel.swift; sourceTree = "<group>"; };
+		30909E782991FC4D004599AF /* LazyEncrypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyEncrypt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30909E7B2991FC4D004599AF /* Crypt1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypt1App.swift; sourceTree = "<group>"; };
+		30909E7D2991FC4D004599AF /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		30909E7F2991FC50004599AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30909E822991FC50004599AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30909E842991FC50004599AF /* LazyEncrypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyEncrypt.entitlements; sourceTree = "<group>"; };
+		30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewItem.swift; sourceTree = "<group>"; };
+		30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewGroup.swift; sourceTree = "<group>"; };
+		30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowVM.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30829369299D246C0096752A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30909E752991FC4D004599AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30448EA5299B9C700071BCC5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30829366299CDF4A0096752A /* RoundedCornersShape.swift */,
+				30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3082936D299D246C0096752A /* LazyEncryptTests */ = {
+			isa = PBXGroup;
+			children = (
+				3082936E299D246C0096752A /* LazyEncryptTests.swift */,
+			);
+			path = LazyEncryptTests;
+			sourceTree = "<group>";
+		};
+		30909E6F2991FC4D004599AF = {
+			isa = PBXGroup;
+			children = (
+				30909E7A2991FC4D004599AF /* LazyEncrypt */,
+				3082936D299D246C0096752A /* LazyEncryptTests */,
+				30909E792991FC4D004599AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		30909E792991FC4D004599AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30909E782991FC4D004599AF /* LazyEncrypt.app */,
+				3082936C299D246C0096752A /* LazyEncryptTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30909E7A2991FC4D004599AF /* LazyEncrypt */ = {
+			isa = PBXGroup;
+			children = (
+				30B2685C299CBE8800A3C2A2 /* Models */,
+				30B2685B299CBE7900A3C2A2 /* ViewModels */,
+				30B2685A299CBE6800A3C2A2 /* Views */,
+				30448EA5299B9C700071BCC5 /* Extensions */,
+				30909E7B2991FC4D004599AF /* Crypt1App.swift */,
+				30909E7F2991FC50004599AF /* Assets.xcassets */,
+				30909E842991FC50004599AF /* LazyEncrypt.entitlements */,
+				3082935E299CD11D0096752A /* Localizable.strings */,
+				30909E812991FC50004599AF /* Preview Content */,
+			);
+			path = LazyEncrypt;
+			sourceTree = "<group>";
+		};
+		30909E812991FC50004599AF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				30909E822991FC50004599AF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30B2685A299CBE6800A3C2A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30909E7D2991FC4D004599AF /* MainWindow.swift */,
+				30829362299CD2890096752A /* AtbashCipherView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30B2685B299CBE7900A3C2A2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */,
+				30829364299CD2E30096752A /* AtbashCipherVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30B2685C299CBE8800A3C2A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */,
+				30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */,
+				30829375299D25860096752A /* AtbashCipherModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3082936B299D246C0096752A /* LazyEncryptTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30829372299D246C0096752A /* Build configuration list for PBXNativeTarget "LazyEncryptTests" */;
+			buildPhases = (
+				30829368299D246C0096752A /* Sources */,
+				30829369299D246C0096752A /* Frameworks */,
+				3082936A299D246C0096752A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30829371299D246C0096752A /* PBXTargetDependency */,
+			);
+			name = LazyEncryptTests;
+			productName = LazyEncryptTests;
+			productReference = 3082936C299D246C0096752A /* LazyEncryptTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30909E772991FC4D004599AF /* LazyEncrypt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30909E872991FC50004599AF /* Build configuration list for PBXNativeTarget "LazyEncrypt" */;
+			buildPhases = (
+				30909E742991FC4D004599AF /* Sources */,
+				30909E752991FC4D004599AF /* Frameworks */,
+				30909E762991FC4D004599AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyEncrypt;
+			packageProductDependencies = (
+			);
+			productName = Crypt1;
+			productReference = 30909E782991FC4D004599AF /* LazyEncrypt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30909E702991FC4D004599AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					3082936B299D246C0096752A = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 30909E772991FC4D004599AF;
+					};
+					30909E772991FC4D004599AF = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 30909E732991FC4D004599AF /* Build configuration list for PBXProject "LazyEncrypt" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = 30909E6F2991FC4D004599AF;
+			packageReferences = (
+			);
+			productRefGroup = 30909E792991FC4D004599AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30909E772991FC4D004599AF /* LazyEncrypt */,
+				3082936B299D246C0096752A /* LazyEncryptTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3082936A299D246C0096752A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30909E762991FC4D004599AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30909E832991FC50004599AF /* Preview Assets.xcassets in Resources */,
+				30829360299CD11D0096752A /* Localizable.strings in Resources */,
+				30909E802991FC50004599AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30829368299D246C0096752A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3082936F299D246C0096752A /* LazyEncryptTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30909E742991FC4D004599AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30829365299CD2E30096752A /* AtbashCipherVM.swift in Sources */,
+				30829363299CD2890096752A /* AtbashCipherView.swift in Sources */,
+				30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */,
+				30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */,
+				30829367299CDF4A0096752A /* RoundedCornersShape.swift in Sources */,
+				30829376299D25860096752A /* AtbashCipherModel.swift in Sources */,
+				30909E7E2991FC4D004599AF /* MainWindow.swift in Sources */,
+				30909E7C2991FC4D004599AF /* Crypt1App.swift in Sources */,
+				30448EA7299B9C850071BCC5 /* SidebarCollapse.swift in Sources */,
+				30B26861299CBF7500A3C2A2 /* SelectedViewGroup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30829371299D246C0096752A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30909E772991FC4D004599AF /* LazyEncrypt */;
+			targetProxy = 30829370299D246C0096752A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3082935E299CD11D0096752A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3082935F299CD11D0096752A /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30829373299D246C0096752A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX3ASU46J7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhrc.LazyEncryptTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyEncrypt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LazyEncrypt";
+			};
+			name = Debug;
+		};
+		30829374299D246C0096752A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BX3ASU46J7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhrc.LazyEncryptTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyEncrypt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LazyEncrypt";
+			};
+			name = Release;
+		};
+		30909E852991FC50004599AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30909E862991FC50004599AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		30909E882991FC50004599AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LazyEncrypt/Preview Content\"";
+				DEVELOPMENT_TEAM = BX3ASU46J7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhrc.LazyEncrypt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		30909E892991FC50004599AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LazyEncrypt/Preview Content\"";
+				DEVELOPMENT_TEAM = BX3ASU46J7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zhrc.LazyEncrypt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30829372299D246C0096752A /* Build configuration list for PBXNativeTarget "LazyEncryptTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30829373299D246C0096752A /* Debug */,
+				30829374299D246C0096752A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30909E732991FC4D004599AF /* Build configuration list for PBXProject "LazyEncrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30909E852991FC50004599AF /* Debug */,
+				30909E862991FC50004599AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30909E872991FC50004599AF /* Build configuration list for PBXNativeTarget "LazyEncrypt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30909E882991FC50004599AF /* Debug */,
+				30909E892991FC50004599AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30909E702991FC4D004599AF /* Project object */;
+}
