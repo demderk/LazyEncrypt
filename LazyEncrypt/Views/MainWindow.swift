@@ -31,11 +31,12 @@ struct MainWindow: View {
                 .padding(16)
         }) {
             switch(viewModel.sidebarSelectedItem?.name) {
-//            case String(localized: "The Atbash Cipher"):
-////                EncryptedTextEditView(encryptProvider: AtbashCipher())
-////                    .navigationTitle(viewModel.windowTitle)
+            case String(localized: "The Atbash Cipher"):
+                AtbashCipherView()
+                    .navigationTitle(viewModel.windowTitle)
             case String(localized: "The Caesar's Cipher"):
                 CesarsCipherView()
+                    .navigationTitle(viewModel.windowTitle)
             default:
                 Text("No Editor")
                     .foregroundColor(.gray)

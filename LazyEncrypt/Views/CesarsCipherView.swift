@@ -11,6 +11,8 @@ struct CesarsCipherView: View {
     @ObservedObject var vm: CesarsCipherVM
     @ObservedObject var evm: EncryptedTextEditVM
     
+    @State var temp: CGFloat = 214
+    
     init() {
         let x = CesarsCipherVM()
         vm = x
@@ -22,7 +24,6 @@ struct CesarsCipherView: View {
     var body: some View {
         HStack {
             EncryptedTextEditView(vm: evm)
-                
             Spacer().frame(width: 0)
             Divider()
             Spacer().frame(width: 0)
@@ -30,7 +31,7 @@ struct CesarsCipherView: View {
                 Text("Cesars Cipher Config")
                     .font(.headline)
                     .foregroundColor(.gray)
-                    .frame(minWidth: 208,alignment: .leading)
+                    .frame(minWidth: 200,alignment: .leading)
                     .padding(8)
                 Spacer().frame(height: 0)
                 HStack(){
@@ -38,7 +39,7 @@ struct CesarsCipherView: View {
                         .font(.caption)
                     Spacer().frame(width: 4)
                     TextField("", text: .constant(String(vm.shift)))
-                        .frame(width: 40)
+                        .frame(width: 48)
                         .multilineTextAlignment(.trailing)
                         .onChange(of: vm.shift, perform: {_ in
                             vm.cipher.shift = vm.shift
@@ -50,10 +51,21 @@ struct CesarsCipherView: View {
                 Rectangle()
                     .fill(.gray)
                     .opacity(0.3)
-                    .frame(minWidth: 224, minHeight: 1, maxHeight: 1)
+                    .frame(minWidth: 214, minHeight: 1, maxHeight: 1)
                     .edgesIgnoringSafeArea(.horizontal)
                 Spacer()
-            }.frame(width: 224)
+            }.offset(x: 214-temp).frame(width: temp)
+        }.toolbar{
+            Button(action: {
+                withAnimation(.linear(duration: 0.2)){
+                    if (temp > 0) {
+                        temp = 0
+                    }
+                    else {
+                        temp = 214
+                    }
+                }
+            }, label: {Image(systemName: "sidebar.trailing")})
         }
     }
 }

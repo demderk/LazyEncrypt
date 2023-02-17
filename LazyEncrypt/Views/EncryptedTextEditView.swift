@@ -25,7 +25,7 @@ struct EncryptedTextEditView: View {
                             .font(.body)
                             .padding(.horizontal,12)
                             .padding(.vertical,4)
-                            .background(Color(CGColor(gray: 0.925, alpha: 1)))
+                            .background(Color("lightGrayPlainButton"))
                             .cornerRadius(8)
                     }.frame(alignment: .center)
                     .buttonStyle(.plain)
@@ -35,7 +35,8 @@ struct EncryptedTextEditView: View {
                         .multilineTextAlignment(.center)
                         .frame(minWidth: 256, maxWidth: .infinity)
                     Spacer()
-                }.padding(16).background(.white)
+                }.padding(16)
+                    .background(Color(nsColor: .controlBackgroundColor))
                 Spacer().frame(height: 0)
                 // Divider
                 Rectangle()
@@ -48,7 +49,8 @@ struct EncryptedTextEditView: View {
                     TextEditor(text: $vm.inputText)
                         .font(.body)
                         .padding(16)
-                        .background(.white)
+                        .scrollContentBackground(.hidden)
+                        .background(Color(nsColor: .controlBackgroundColor))
                         .frame(minWidth: 304)
                         .onChange(of: vm.inputText, perform: { _ in
                             vm.translate()
@@ -63,7 +65,7 @@ struct EncryptedTextEditView: View {
                             .animation(nil, value: UUID())
                             .frame(alignment: .topLeading)
                     }.padding(16)
-                        .background(Color(CGColor(gray: 0.97, alpha: 1)))
+                        .background(Color("lightGrayBackground"))
                         .frame(minWidth: 304)
                 }
             }
@@ -80,8 +82,8 @@ struct EncryptedTextEditView: View {
 }
 
 
-struct AtbashCipherView_Previews: PreviewProvider {
+struct EncryptedTextEditView_Previews: PreviewProvider {
     static var previews: some View {
-        EncryptedTextEditView(vm:  EncryptedTextEditVM(encryptProvider: AtbashCipher()))
+        EncryptedTextEditView(vm: EncryptedTextEditVM(encryptProvider: AtbashCipher()))
     }
 }
