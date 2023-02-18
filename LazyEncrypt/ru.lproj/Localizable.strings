@@ -2,7 +2,22 @@
 "Base cryptography" = "Базовая криптография";
 
 /* No comment provided by engineer. */
+"Cipher Config" = "Параметры шифрования";
+
+/* No comment provided by engineer. */
+"Cipher Shift" = "Сдвиг";
+
+/* No comment provided by engineer. */
+"Encrypted Text" = "Зашифрованный текст";
+
+/* No comment provided by engineer. */
 "Home Page" = "Главная";
+
+/* No comment provided by engineer. */
+"No Editor" = "Нечего редактировать";
+
+/* No comment provided by engineer. */
+"Original Text" = "Исходный текст";
 
 /* No comment provided by engineer. */
 "The Atbash Cipher" = "Шифр Атбаш";

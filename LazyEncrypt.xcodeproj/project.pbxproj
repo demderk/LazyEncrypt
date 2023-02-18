@@ -55,9 +55,10 @@
 		30909E842991FC50004599AF /* LazyEncrypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyEncrypt.entitlements; sourceTree = "<group>"; };
 		30A05CD3299F3914008BD072 /* TextEncyption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEncyption.swift; sourceTree = "<group>"; };
 		30A05CD5299F44A7008BD072 /* CesarsCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipher.swift; sourceTree = "<group>"; };
-		30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherView.swift; sourceTree = "<group>"; };
+		30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherView.swift; sourceTree = "<group>"; tabWidth = 4; };
 		30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherVM.swift; sourceTree = "<group>"; };
 		30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherView.swift; sourceTree = "<group>"; };
+		30A05CE1299FE671008BD072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewItem.swift; sourceTree = "<group>"; };
 		30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewGroup.swift; sourceTree = "<group>"; };
 		30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowVM.swift; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		30909E7A2991FC4D004599AF /* LazyEncrypt */ = {
 			isa = PBXGroup;
 			children = (
+				30A05CE1299FE671008BD072 /* Info.plist */,
 				30B2685C299CBE8800A3C2A2 /* Models */,
 				30B2685B299CBE7900A3C2A2 /* ViewModels */,
 				30B2685A299CBE6800A3C2A2 /* Views */,
@@ -500,12 +502,13 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = LazyEncrypt/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023, Roman Zheglov";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = zhrc.LazyEncrypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -530,12 +533,13 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = LazyEncrypt/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023, Roman Zheglov";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = zhrc.LazyEncrypt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

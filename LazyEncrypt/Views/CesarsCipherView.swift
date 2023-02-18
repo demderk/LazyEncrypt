@@ -28,7 +28,7 @@ struct CesarsCipherView: View {
             Divider()
             Spacer().frame(width: 0)
             VStack() {
-                Text("Cesars Cipher Config")
+                Text("Cipher Config")
                     .font(.headline)
                     .foregroundColor(.gray)
                     .frame(minWidth: 200,alignment: .leading)
@@ -38,7 +38,7 @@ struct CesarsCipherView: View {
                     Text("Cipher Shift")
                         .font(.caption)
                     Spacer().frame(width: 4)
-                    TextField("", text: .constant(String(vm.shift)))
+                    TextField("\(vm.shift)", value: $vm.shift, formatter: NumberFormatter())
                         .frame(width: 48)
                         .multilineTextAlignment(.trailing)
                         .onChange(of: vm.shift, perform: {_ in
@@ -47,7 +47,7 @@ struct CesarsCipherView: View {
                         })
                     Spacer().frame(width: 2)
                     Stepper(value: $vm.shift, label: {})
-                }.frame(minWidth: 208,alignment: .trailing)
+                }.frame(minWidth: 200,alignment: .trailing)
                 Rectangle()
                     .fill(.gray)
                     .opacity(0.3)
@@ -57,7 +57,7 @@ struct CesarsCipherView: View {
             }.offset(x: 214-temp).frame(width: temp)
         }.toolbar{
             Button(action: {
-                withAnimation(.linear(duration: 0.2)){
+                withAnimation(.easeInOut(duration: 0.2)){
                     if (temp > 0) {
                         temp = 0
                     }

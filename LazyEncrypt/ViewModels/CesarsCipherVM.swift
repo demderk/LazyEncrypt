@@ -6,13 +6,15 @@
 //
 
 import Foundation
+import SwiftUI
 
 class CesarsCipherVM: ObservableObject {
     @Published var shift: Int = 3
     @Published var cipher: CesarsCipher
     @Published var inputText: String = ""
     @Published var outputText: String = ""
-
+    
+    
     
     init() {
         let shift = 3

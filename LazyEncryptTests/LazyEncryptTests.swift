@@ -67,4 +67,16 @@ final class AtbashTests: XCTestCase {
         XCTAssertEqual(result, "абв")
     }
     
+    func testCesarsRussianDecryptStepExceeded() throws{
+        let testClass = CesarsCipher(1455)
+        let result = testClass.DecryptText(data: "где")
+        XCTAssertEqual(result, "абв")
+    }
+    
+    func testCesarsEnglishDecryptStepExceeded() throws{
+        let testClass = CesarsCipher(1455)
+        let result = testClass.DecryptText(data: "zab")
+        XCTAssertEqual(result, "abc")
+    }
+    
 }
