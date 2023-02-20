@@ -16,7 +16,7 @@ class CesarsCipher: TextEncyption{
         self.shift = shift
     }
     
-    func EncryptText(data: String) -> String {
+    func EncryptText(_ data: String) -> String {
         var result: String = ""
         for item in data {
             if let engIndex = englishAlphabet.firstIndex(of: Character(item.lowercased())){
@@ -34,7 +34,7 @@ class CesarsCipher: TextEncyption{
         return result
     }
     
-    func DecryptText(data: String) -> String {
+    func DecryptText(_ data: String) -> String {
         var result: String = ""
         for item in data {
             if let engIndex = englishAlphabet.firstIndex(of: Character(item.lowercased())){

@@ -18,7 +18,7 @@ class AtbashCipher: TextEncyption {
         russianAlphabetReversed = russianAlphabet.reversed()
     }
     
-    func EncryptText(data: String) -> String {
+    func EncryptText(_ data: String) -> String {
         var result: String = ""
         for item in data {
             if let engIndex = englishAlphabet.firstIndex(of: Character(item.lowercased())){
@@ -33,7 +33,7 @@ class AtbashCipher: TextEncyption {
         }
         return result
     }
-    func DecryptText(data: String) -> String {
-        return EncryptText(data: data)
+    func DecryptText(_ data: String) -> String {
+        return EncryptText(data)
     }
 }

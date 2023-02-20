@@ -23,6 +23,7 @@
 		30A05CDA299F4CEF008BD072 /* CesarsCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */; };
 		30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */; };
 		30A05CE0299FBC69008BD072 /* AtbashCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */; };
+		30A05CE329A1197F008BD072 /* RichelieuCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CE229A1197F008BD072 /* RichelieuCipher.swift */; };
 		30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */; };
 		30B26861299CBF7500A3C2A2 /* SelectedViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */; };
 		30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */; };
@@ -59,6 +60,7 @@
 		30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherVM.swift; sourceTree = "<group>"; };
 		30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherView.swift; sourceTree = "<group>"; };
 		30A05CE1299FE671008BD072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		30A05CE229A1197F008BD072 /* RichelieuCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichelieuCipher.swift; sourceTree = "<group>"; };
 		30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewItem.swift; sourceTree = "<group>"; };
 		30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewGroup.swift; sourceTree = "<group>"; };
 		30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowVM.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				30829375299D25860096752A /* AtbashCipher.swift */,
 				30A05CD3299F3914008BD072 /* TextEncyption.swift */,
 				30A05CD5299F44A7008BD072 /* CesarsCipher.swift */,
+				30A05CE229A1197F008BD072 /* RichelieuCipher.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				30A05CE0299FBC69008BD072 /* AtbashCipherView.swift in Sources */,
 				30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */,
 				30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */,
+				30A05CE329A1197F008BD072 /* RichelieuCipher.swift in Sources */,
 				30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */,
 				30829367299CDF4A0096752A /* RoundedCornersShape.swift in Sources */,
 				30829376299D25860096752A /* AtbashCipher.swift in Sources */,

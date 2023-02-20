@@ -31,11 +31,11 @@ class EncryptedTextEditVM: ObservableObject {
     }
     
     public func performEncrypt() {
-        outputText = encryptProvider.EncryptText(data: inputText)
+        outputText = encryptProvider.EncryptText(inputText)
     }
     
     public func performDecrypt() {
-        outputText = encryptProvider.DecryptText(data: inputText)
+        outputText = encryptProvider.DecryptText(inputText)
     }
     
     public func swapMode() {
