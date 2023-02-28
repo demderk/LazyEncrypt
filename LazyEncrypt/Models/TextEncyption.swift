@@ -8,6 +8,6 @@
 import Foundation
 
 protocol TextEncyption{
-    func EncryptText(_ data: String) -> String
-    func DecryptText(_ data: String) -> String
+    func EncryptText(_ data: String) throws -> String
+    func DecryptText(_ data: String) throws -> String
 }

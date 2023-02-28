@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RichelieuKeyError: Error {
+enum RichelieuError: Error {
     // KEYPART Errors
     case keypartIsEmpty(atPosition: Int)
     case keyKeypartSymbolIsUnreachable(atPosition: Int, blockLength: Int, maxValue: Int)
@@ -18,6 +18,7 @@ enum RichelieuKeyError: Error {
 //    case keyLengthIncorrect(expectedLength: Int ,currentLength: Int)
     // PArser
     case keySyntaxError(atPostion: Int)
+    case dataIsLongerThanKey(dataCount: Int, keyLength: Int)
 }
 
 class RichelieuCipher: TextEncyption {
@@ -26,8 +27,27 @@ class RichelieuCipher: TextEncyption {
     
     private var key: [[Int]] = []
     
-    func EncryptText(_ data: String) -> String {
-        return "Error"
+    func EncryptText(_ data: String) throws -> String {
+        let keyLength = key.compactMap({$0.count}).reduce(0, +)
+        guard keyLength <= data.count else {
+            throw RichelieuError.dataIsLongerThanKey(dataCount: data.count, keyLength: keyLength)
+        }
+        var parts: [String] = []
+        var parsedString = data
+        for keyPart in key {
+            let originalKeyPart = String(parsedString.prefix(keyPart.count))
+            var encryptedKeypart = ""
+            parsedString = String(parsedString.suffix(from: parsedString.index(parsedString.startIndex, offsetBy: keyPart.count)))
+            for i in keyPart {
+                encryptedKeypart.append(originalKeyPart[i-1])
+            }
+            parts.append(encryptedKeypart)
+        }
+        let tailCount = data.count - parts.compactMap({$0.count}).reduce(0, +)
+        if (tailCount > 0) {
+            parts.append(String(data.suffix(tailCount)))
+        }
+        return parts.joined()
     }
     
     func DecryptText(_ data: String) -> String {
@@ -53,13 +73,13 @@ class RichelieuCipher: TextEncyption {
         
         //TODO: Position detection
         guard (x.joined() == data) else{
-            throw RichelieuKeyError.keySyntaxError(atPostion: -1)
+            throw RichelieuError.keySyntaxError(atPostion: -1)
         }
         
         for (n,item) in dataParsed.enumerated(){
             // Empty KEYPART
             if item.count == 0 {
-                throw RichelieuKeyError.keypartIsEmpty(atPosition: n)
+                throw RichelieuError.keypartIsEmpty(atPosition: n)
             }
             // Это надо?
 //            if item[0] != item.count {
@@ -69,7 +89,7 @@ class RichelieuCipher: TextEncyption {
             // Unreachable
             let maxValue = item.max()!
             if maxValue > item.count {
-                throw RichelieuKeyError.keyKeypartSymbolIsUnreachable(atPosition: n,blockLength: item.count, maxValue: maxValue)
+                throw RichelieuError.keyKeypartSymbolIsUnreachable(atPosition: n,blockLength: item.count, maxValue: maxValue)
             }
             
             
@@ -78,25 +98,28 @@ class RichelieuCipher: TextEncyption {
             for uniqItem in item {
                 if (seenNumbers.contains(uniqItem))
                 {
-                    throw RichelieuKeyError.keyKeyPartSymbolsNotUnique(atPosition: n)
+                    throw RichelieuError.keyKeyPartSymbolsNotUnique(atPosition: n)
                 }
                 seenNumbers.append(uniqItem)
             }
             
             // KEY PART ITEM IS LESS THAN ZERO
             if (item.filter({$0 <= 0}).count > 0) {
-                throw RichelieuKeyError.keyKeypartSymbolLessThanZero(atPosition: n)
+                throw RichelieuError.keyKeypartSymbolLessThanZero(atPosition: n)
             }
             
             // KEYPART IS ASYMETRIC
             for (i,xItem) in item.enumerated() {
                 if (i+1 != item[xItem-1]) {
-                    throw RichelieuKeyError.keyKeyPartIsAsymetric(atPosition: n)
+                    throw RichelieuError.keyKeyPartIsAsymetric(atPosition: n)
                 }
             }
             
+            guard item.sorted() == Array(1...item.count) else {
+                throw RichelieuError.keyKeypartIsIncomplete(atPosition: n)
+            }
         //TODO: REALIZE keyKeypartIsIncomplete
         }
-        print(dataParsed)
+        key = dataParsed
     }
 }
