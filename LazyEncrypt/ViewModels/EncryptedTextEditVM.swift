@@ -14,6 +14,7 @@ class EncryptedTextEditVM: ObservableObject {
     @Published var firstModeName: String = String(localized: "Original Text")
     @Published var secondModeName: String = String(localized: "Encrypted Text")
     @Published var isEncrypting: Bool = true
+    @Published var errorMessage: String?
     
     public var encryptProvider: TextEncyption
     
@@ -31,11 +32,22 @@ class EncryptedTextEditVM: ObservableObject {
     }
     
     public func performEncrypt() {
-        outputText = (try? encryptProvider.EncryptText(inputText)) ?? "Whoops... Error."
+        do {
+            outputText = try encryptProvider.EncryptText(inputText)
+            errorMessage = nil
+        } catch {
+            outputText = error.localizedDescription
+            errorMessage = error.localizedDescription
+        }
     }
     
     public func performDecrypt() {
-        outputText = (try? encryptProvider.DecryptText(inputText)) ?? "Whoops... Error."
+        do {
+            outputText = try encryptProvider.DecryptText(inputText)
+            errorMessage = nil
+        } catch {
+            errorMessage = error.localizedDescription
+        }
     }
     
     public func swapMode() {

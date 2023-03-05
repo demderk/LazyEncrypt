@@ -155,7 +155,7 @@ final class RichelieuTests: XCTestCase {
         let testClass = RichelieuCipher()
         try testClass.parseKey("(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)")
         XCTAssertThrowsError(try testClass.EncryptText("КРИПТОГРАФИЯ")) { error in
-            guard case RichelieuError.dataIsLongerThanKey(_, _) = error else {
+            guard case RichelieuError.keyIsLongerThanData(_, _) = error else {
                 return XCTFail()
             }
         }

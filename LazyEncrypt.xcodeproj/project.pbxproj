@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303D947B29B1C855000B160E /* RichelieuCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D947A29B1C855000B160E /* RichelieuCipherView.swift */; };
 		30448EA7299B9C850071BCC5 /* SidebarCollapse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */; };
 		30829360299CD11D0096752A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3082935E299CD11D0096752A /* Localizable.strings */; };
 		30829363299CD2890096752A /* EncryptedTextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829362299CD2890096752A /* EncryptedTextEditView.swift */; };
@@ -24,6 +25,7 @@
 		30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */; };
 		30A05CE0299FBC69008BD072 /* AtbashCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */; };
 		30A05CE329A1197F008BD072 /* RichelieuCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CE229A1197F008BD072 /* RichelieuCipher.swift */; };
+		30A7656529B46A37008AE3A7 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A7656429B46A37008AE3A7 /* ShakeAnimation.swift */; };
 		30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */; };
 		30B26861299CBF7500A3C2A2 /* SelectedViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */; };
 		30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */; };
@@ -43,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		303D947A29B1C855000B160E /* RichelieuCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichelieuCipherView.swift; sourceTree = "<group>"; };
 		30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCollapse.swift; sourceTree = "<group>"; };
 		3082935F299CD11D0096752A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		30829362299CD2890096752A /* EncryptedTextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTextEditView.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherView.swift; sourceTree = "<group>"; };
 		30A05CE1299FE671008BD072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30A05CE229A1197F008BD072 /* RichelieuCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichelieuCipher.swift; sourceTree = "<group>"; };
+		30A7656429B46A37008AE3A7 /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
 		30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewItem.swift; sourceTree = "<group>"; };
 		30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedViewGroup.swift; sourceTree = "<group>"; };
 		30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowVM.swift; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 				30829366299CDF4A0096752A /* RoundedCornersShape.swift */,
 				30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */,
 				30BF56D129ADB8B400DFD025 /* StringIndex.swift */,
+				30A7656429B46A37008AE3A7 /* ShakeAnimation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				30829362299CD2890096752A /* EncryptedTextEditView.swift */,
 				30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */,
 				30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */,
+				303D947A29B1C855000B160E /* RichelieuCipherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +311,8 @@
 			files = (
 				30829365299CD2E30096752A /* EncryptedTextEditVM.swift in Sources */,
 				30829363299CD2890096752A /* EncryptedTextEditView.swift in Sources */,
+				30A7656529B46A37008AE3A7 /* ShakeAnimation.swift in Sources */,
+				303D947B29B1C855000B160E /* RichelieuCipherView.swift in Sources */,
 				30A05CE0299FBC69008BD072 /* AtbashCipherView.swift in Sources */,
 				30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */,
 				30BF56D229ADB8B400DFD025 /* StringIndex.swift in Sources */,

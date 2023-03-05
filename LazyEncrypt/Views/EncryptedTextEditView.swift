@@ -28,7 +28,7 @@ struct EncryptedTextEditView: View {
                             .background(Color("lightGrayPlainButton"))
                             .cornerRadius(8)
                     }.frame(alignment: .center)
-                    .buttonStyle(.plain)
+                        .buttonStyle(.plain)
                     Spacer()
                     Text(vm.secondModeName)
                         .font(.title3)
@@ -57,16 +57,37 @@ struct EncryptedTextEditView: View {
                         })
                     Spacer()
                         .frame(width: 0)
-                    ScrollView{
-                        Text(vm.outputText)
-                            .font(.body)
-                            .textSelection(.enabled)
-                            .frame(maxWidth: .infinity,alignment: .leading)
-                            .animation(nil, value: UUID())
-                            .frame(alignment: .topLeading)
-                    }.padding(16)
-                        .background(Color("lightGrayBackground"))
-                        .frame(minWidth: 304)
+                    ZStack{
+                        ScrollView{
+                            Text(vm.errorMessage == nil ? vm.outputText : "")
+                                .font(.body)
+                                .textSelection(.enabled)
+                                .frame(maxWidth: .infinity,alignment: .leading)
+                                .animation(nil, value: UUID())
+                                .frame(alignment: .topLeading)
+                        }.padding(16)
+                            .background(vm.errorMessage == nil ? Color("lightGrayBackground") : Color("lightGrayBackgroundError"))
+                            .frame(minWidth: 304)
+                        if let errorMsg = vm.errorMessage{
+                            HStack(alignment: .top){
+                                Image(systemName: "xmark.octagon.fill")
+                                    .font(.system(size: 32))
+                                    .padding(.top,2)
+                                Spacer().frame(width: 8)
+                                VStack(alignment: .leading){
+                                    Text("An error has occurred")
+                                        .font(.title)
+                                    Text(errorMsg)
+                                        .font(.body)
+                                }
+                                Spacer()
+                            }.foregroundColor(Color("LabelRed"))
+                                .padding(.bottom,64)
+                                .padding(.horizontal,16)
+                                .frame(alignment: .leading)
+                                .frame(minWidth: 280, alignment: .leading)
+                        }
+                    }
                 }
             }
         }

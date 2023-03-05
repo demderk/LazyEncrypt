@@ -37,6 +37,9 @@ struct MainWindow: View {
             case String(localized: "The Caesar's Cipher"):
                 CesarsCipherView()
                     .navigationTitle(viewModel.windowTitle)
+            case String(localized: "The Richelieu's Cipher"):
+                RichelieuCipherView()
+                    .navigationTitle(viewModel.windowTitle)
             default:
                 Text("No Editor")
                     .foregroundColor(.gray)
