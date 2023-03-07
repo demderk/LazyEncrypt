@@ -75,12 +75,13 @@ enum RichelieuError: LocalizedError {
             let regex = try! NSRegularExpression(pattern: regexKey)
             let results = regex.matches(in: data, range: NSRange(location: 0, length: data.count))
             let x = results.map {String(data[Range($0.range, in: data)!])}
-            
             var dataParsed: [[Int]] = []
-            
+
             for item in x {
+                let checkin = item.trimmingCharacters(in: CharacterSet(charactersIn: "0123456789.").inverted)
+                let numbers = checkin.split(separator: ",")
                 var tempResult: [Int] = []
-                for char in item {
+                for char in numbers {
                     if let number = Int(String(char)) {
                         tempResult.append(number)
                     }
@@ -94,22 +95,13 @@ enum RichelieuError: LocalizedError {
             }
             
             for (n,item) in dataParsed.enumerated(){
-                // Empty KEYPART
-                // Checked in Syntax check
-                
-                // Это надо?
-                //            if item[0] != item.count {
-                //                throw RichelieuCipherError.keyLengthIncorrect(expectedLength: item.count, currentLength: item[0])
-                //            }
-                
-                // Unreachable
+                //MARK: Unreachable
                 let maxValue = item.max()!
                 if maxValue > item.count {
                     throw RichelieuError.keyKeypartSymbolIsUnreachable(atPosition: n,blockLength: item.count, maxValue: maxValue)
                 }
                 
-                
-                // KEYPART Symbols is unique
+                //MARK: KEYPART Symbols is unique
                 var seenNumbers: [Int] = []
                 for uniqItem in item {
                     if (seenNumbers.contains(uniqItem))
@@ -119,12 +111,12 @@ enum RichelieuError: LocalizedError {
                     seenNumbers.append(uniqItem)
                 }
                 
-                // KEY PART ITEM IS LESS THAN ZERO
+                //MARK: KEY PART ITEM IS LESS THAN ZERO
                 if (item.filter({$0 <= 0}).count > 0) {
                     throw RichelieuError.keyKeypartSymbolLessThanZero(atPosition: n)
                 }
                 
-                // KEYPART IS ASYMETRIC
+                //MARK: KEYPART IS ASYMETRIC
                 for (i,xItem) in item.enumerated() {
                     if (i+1 != item[xItem-1]) {
                         throw RichelieuError.keyKeyPartIsAsymetric(atPosition: n)
