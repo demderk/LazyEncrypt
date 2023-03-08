@@ -28,6 +28,9 @@ class MainWindowVM: ObservableObject {
                 SelectedViewItem(name: String(localized: "The Atbash Cipher"), image: Image(systemName: "arrow.left.arrow.right")),
                 SelectedViewItem(name: String(localized: "The Caesar's Cipher"), image: Image(systemName: "arrow.right.square")),
                 SelectedViewItem(name: String(localized: "The Richelieu's Cipher"), image: Image(systemName: "123.rectangle"))
+            ]),
+            SelectedViewGroup(name: String(localized: "Advanced cryptography"), items: [
+                SelectedViewItem(name: String(localized: "The Gronsfeld's Cipher"), image: Image(systemName: "arrow.down.app"))
             ])
         ]
     }

@@ -8,21 +8,20 @@
 import Foundation
 
 enum RichelieuError: LocalizedError {
-    // KEYPART Errors
+    // Keypart Errors
     case keyKeypartSymbolIsUnreachable(atPosition: Int, blockLength: Int, maxValue: Int)
     case keyKeypartSymbolLessThanZero(atPosition: Int)
     case keyKeypartIsIncomplete(atPosition: Int)
     case keyKeyPartIsAsymetric(atPosition: Int)
     case keyKeyPartSymbolsNotUnique(atPosition: Int)
-    case keySyntaxError(atPostion: Int)
-    
+    case keySyntaxError
     // Parser Errors
     case keyIsLongerThanData(dataCount: Int, keyLength: Int)
     
     var errorDescription: String? {
         switch self {
-        case .keySyntaxError(atPostion: let pos):
-            return String(localized: "Syntax error at postion: \(pos)")
+        case .keySyntaxError:
+            return String(localized: "Syntax error")
         case .keyKeypartIsIncomplete(atPosition: let pos):
             return String(localized: "Key in incomplete at position: \(pos)")
         case .keyKeypartSymbolIsUnreachable(atPosition: let pos, blockLength: let exp, maxValue: let cur):
@@ -39,9 +38,7 @@ enum RichelieuError: LocalizedError {
     }
 }
     class RichelieuCipher: TextEncyption {
-        
         private let regexKey = "([(](\\d+[,]*)+[)])"
-        
         private var key: [[Int]] = []
         
         func EncryptText(_ data: String) throws -> String {
@@ -89,9 +86,8 @@ enum RichelieuError: LocalizedError {
                 dataParsed.append(tempResult)
             }
             
-            //TODO: Position detection
             guard (x.joined() == data) else{
-                throw RichelieuError.keySyntaxError(atPostion: -1)
+                throw RichelieuError.keySyntaxError
             }
             
             for (n,item) in dataParsed.enumerated(){

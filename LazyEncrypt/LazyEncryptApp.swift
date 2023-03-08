@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 @main
-struct Crypt1App: App {
+struct LazyEncryptApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {

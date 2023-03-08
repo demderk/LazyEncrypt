@@ -40,6 +40,9 @@ struct MainWindow: View {
             case String(localized: "The Richelieu's Cipher"):
                 RichelieuCipherView()
                     .navigationTitle(viewModel.windowTitle)
+            case String(localized: "The Gronsfeld's Cipher"):
+                GronsfeldCipherView()
+                    .navigationTitle(viewModel.windowTitle)
             default:
                 Text("No Editor")
                     .foregroundColor(.gray)
