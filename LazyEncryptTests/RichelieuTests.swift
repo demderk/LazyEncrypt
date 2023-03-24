@@ -20,7 +20,7 @@ final class RichelieuTests: XCTestCase {
 
     func testKeyParseUnreachable() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(4,2,1)")) { error in
+        XCTAssertThrowsError(try testClass.setKey("(4,2,1)")) { error in
             guard case RichelieuError.keyKeypartSymbolIsUnreachable(_,_,_) = error else{
                 return XCTFail()
             }
@@ -29,7 +29,7 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParseASYMETRICRepeating() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(1,1)")) { error in
+        XCTAssertThrowsError(try testClass.setKey("(1,1)")) { error in
             guard case RichelieuError.keyKeyPartSymbolsNotUnique(_) = error else{
                 return XCTFail()
             }
@@ -38,7 +38,7 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParseExampleKeyTest3() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(1,3)")) { error in
+        XCTAssertThrowsError(try testClass.setKey("(1,3)")) { error in
             guard case RichelieuError.keyKeypartSymbolIsUnreachable(_,_,_) = error else{
                 return XCTFail()
             }
@@ -47,7 +47,7 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParseExampleKeyTest4() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(3,2,1)(4,3,2)")) { error in
+        XCTAssertThrowsError(try testClass.setKey("(3,2,1)(4,3,2)")) { error in
             guard case RichelieuError.keyKeypartSymbolIsUnreachable(_,_,_) = error else{
                 return XCTFail()
             }
@@ -56,7 +56,7 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParseASYMETRICIncorrect() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(4,1,2,3)")) { error in
+        XCTAssertThrowsError(try testClass.setKey("(4,1,2,3)")) { error in
             guard case RichelieuError.keyKeyPartIsAsymetric(_) = error else{
                 return XCTFail()
             }
@@ -65,7 +65,7 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParseNonUnique() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(1,1,2,3)")) { error in
+        XCTAssertThrowsError(try testClass.setKey("(1,1,2,3)")) { error in
             guard case RichelieuError.keyKeyPartSymbolsNotUnique(_) = error else{
                 return XCTFail()
             }
@@ -74,7 +74,7 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParseSymbolLessThanZero() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(4,0,2,3)")) { error in
+        XCTAssertThrowsError(try testClass.setKey("(4,0,2,3)")) { error in
             guard case RichelieuError.keyKeypartSymbolLessThanZero(_) = error else{
                 return XCTFail()
             }
@@ -84,8 +84,8 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParseSymbolEmpty() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("()")) { error in
-            guard case RichelieuError.keySyntaxError(_) = error else{
+        XCTAssertThrowsError(try testClass.setKey("()")) { error in
+            guard case RichelieuError.keySyntaxError = error else{
                 return XCTFail()
             }
         }
@@ -93,8 +93,8 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParsekeySyntaxError() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(56656 ,das4)")) { error in
-            guard case RichelieuError.keySyntaxError(_) = error else{
+        XCTAssertThrowsError(try testClass.setKey("(56656 ,das4)")) { error in
+            guard case RichelieuError.keySyntaxError = error else{
                 return XCTFail()
             }
         }
@@ -102,8 +102,8 @@ final class RichelieuTests: XCTestCase {
     
     func testKeyParsekeySyntaxError2() throws {
         let testClass = RichelieuCipher()
-        XCTAssertThrowsError(try testClass.parseKey("(,0,2,)")) { error in
-            guard case RichelieuError.keySyntaxError(_) = error else{
+        XCTAssertThrowsError(try testClass.setKey("(,0,2,)")) { error in
+            guard case RichelieuError.keySyntaxError = error else{
                 return XCTFail()
             }
         }
@@ -111,49 +111,49 @@ final class RichelieuTests: XCTestCase {
     
     func testEncryptSimple() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(2,1)")
+        try testClass.setKey("(2,1)")
         XCTAssertEqual(try testClass.EncryptText("ab"),"ba")
     }
     
     func testEncryptSimpleSuper() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(2,1)")
+        try testClass.setKey("(2,1)")
         XCTAssertEqual(try testClass.EncryptText("abc"),"bac")
     }
     
     func testEncryptSimpleLong() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(2,1)(2,1)(2,1)")
+        try testClass.setKey("(2,1)(2,1)(2,1)")
         XCTAssertEqual(try testClass.EncryptText("ababab"),"bababa")
     }
     
     func testEncryptExampleTest1() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(3,2,1)(4,2,3,1)(1)(2,1)(2,1)")
+        try testClass.setKey("(3,2,1)(4,2,3,1)(1)(2,1)(2,1)")
         XCTAssertEqual(try testClass.EncryptText("КРИПТОГРАФИЯ"),"ИРКГТОПРФАЯИ")
     }
     
     func testEncryptExampleTest2() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(3,2,1)")
+        try testClass.setKey("(3,2,1)")
         XCTAssertEqual(try testClass.EncryptText("КРИПТОГРАФИЯ"),"ИРКПТОГРАФИЯ")
     }
 
     func testEncryptExampleTest3() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)")
+        try testClass.setKey("(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)")
         XCTAssertEqual(try testClass.EncryptText("КРИПТОГРАФИЯ"),"РКПИОТРГФАЯИ")
     }
     
     func testEncryptRandomTest() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(6,2,4,3,5,1)(3,2,1)")
+        try testClass.setKey("(6,2,4,3,5,1)(3,2,1)")
         XCTAssertEqual(try testClass.EncryptText("КРИПТОГРАФИЯ"),"ОРПИТКАРГФИЯ")
     }
     
     func testEncryptKeyIsLonger() throws {
         let testClass = RichelieuCipher()
-        try testClass.parseKey("(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)")
+        try testClass.setKey("(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)(2,1)")
         XCTAssertThrowsError(try testClass.EncryptText("КРИПТОГРАФИЯ")) { error in
             guard case RichelieuError.keyIsLongerThanData(_, _) = error else {
                 return XCTFail()

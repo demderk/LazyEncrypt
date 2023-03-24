@@ -22,6 +22,7 @@ struct LazyEncryptApp: App {
     var body: some Scene {
         WindowGroup {
             MainWindow()
+                .frame(minWidth: 1100,minHeight: 500)
         }.commands{
             SidebarCommands()
         }

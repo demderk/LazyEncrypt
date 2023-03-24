@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		303D947B29B1C855000B160E /* GronsfeldCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303D947A29B1C855000B160E /* GronsfeldCipherView.swift */; };
-		30448EA7299B9C850071BCC5 /* SidebarCollapse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */; };
+		3044FBB429CDF0390013DC65 /* VigenereCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044FBB329CDF0390013DC65 /* VigenereCipher.swift */; };
+		3044FBB629CDF2460013DC65 /* VigenereCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044FBB529CDF2460013DC65 /* VigenereCipherView.swift */; };
+		3044FBB829CE17950013DC65 /* MainWindowPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044FBB729CE17950013DC65 /* MainWindowPage.swift */; };
 		30829360299CD11D0096752A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3082935E299CD11D0096752A /* Localizable.strings */; };
-		30829363299CD2890096752A /* EncryptedTextEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829362299CD2890096752A /* EncryptedTextEditView.swift */; };
+		30829363299CD2890096752A /* EncryptedTextEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829362299CD2890096752A /* EncryptedTextEdit.swift */; };
 		30829365299CD2E30096752A /* EncryptedTextEditVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829364299CD2E30096752A /* EncryptedTextEditVM.swift */; };
 		30829367299CDF4A0096752A /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30829366299CDF4A0096752A /* RoundedCornersShape.swift */; };
 		3082936F299D246C0096752A /* AtbashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3082936E299D246C0096752A /* AtbashTests.swift */; };
@@ -21,9 +22,6 @@
 		30909E832991FC50004599AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30909E822991FC50004599AF /* Preview Assets.xcassets */; };
 		30A05CD4299F3914008BD072 /* TextEncyption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CD3299F3914008BD072 /* TextEncyption.swift */; };
 		30A05CD6299F44A7008BD072 /* CesarsCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CD5299F44A7008BD072 /* CesarsCipher.swift */; };
-		30A05CDA299F4CEF008BD072 /* CesarsCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */; };
-		30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */; };
-		30A05CE0299FBC69008BD072 /* AtbashCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */; };
 		30A05CE329A1197F008BD072 /* RichelieuCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A05CE229A1197F008BD072 /* RichelieuCipher.swift */; };
 		30A7656529B46A37008AE3A7 /* ShakeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A7656429B46A37008AE3A7 /* ShakeAnimation.swift */; };
 		30A7656729B4F1E9008AE3A7 /* GronsfeldCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A7656629B4F1E9008AE3A7 /* GronsfeldCipher.swift */; };
@@ -34,8 +32,16 @@
 		30BF56D229ADB8B400DFD025 /* StringIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF56D129ADB8B400DFD025 /* StringIndex.swift */; };
 		30BF56D429ADEB4200DFD025 /* RichelieuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF56D329ADEB4200DFD025 /* RichelieuTests.swift */; };
 		30BF56D629ADED3900DFD025 /* CesarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BF56D529ADED3900DFD025 /* CesarsTests.swift */; };
+		30D1DD9029BC305100C0012F /* CesarsCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DD8F29BC305100C0012F /* CesarsCipherView.swift */; };
+		30D1DD9229BC328000C0012F /* AtbashCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DD9129BC328000C0012F /* AtbashCipherView.swift */; };
+		30D1DD9429BC337100C0012F /* GronsfeldCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DD9329BC337100C0012F /* GronsfeldCipherView.swift */; };
+		30D1DD9629BC361000C0012F /* RichelieuCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D1DD9529BC361000C0012F /* RichelieuCipherView.swift */; };
 		30EEB18329B641ED000175A3 /* GronsfeldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEB18229B641ED000175A3 /* GronsfeldTests.swift */; };
-		30EEB18529B72794000175A3 /* RichelieuCipherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEB18429B72794000175A3 /* RichelieuCipherView.swift */; };
+		30EEB18A29B873D1000175A3 /* KeyEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEB18929B873D1000175A3 /* KeyEncryption.swift */; };
+		30EEB18C29B87492000175A3 /* EncryptionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEB18B29B87491000175A3 /* EncryptionError.swift */; };
+		30EEB19029B8AC1A000175A3 /* NumberSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEB18F29B8AC1A000175A3 /* NumberSelector.swift */; };
+		30EEB19229B8B00E000175A3 /* SettingsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEB19129B8B00E000175A3 /* SettingsGroup.swift */; };
+		30EEB19429B8EEC4000175A3 /* KeyEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EEB19329B8EEC4000175A3 /* KeyEdit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +55,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		303D947A29B1C855000B160E /* GronsfeldCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GronsfeldCipherView.swift; sourceTree = "<group>"; };
-		30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarCollapse.swift; sourceTree = "<group>"; };
+		3044FBB329CDF0390013DC65 /* VigenereCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VigenereCipher.swift; sourceTree = "<group>"; };
+		3044FBB529CDF2460013DC65 /* VigenereCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VigenereCipherView.swift; sourceTree = "<group>"; wrapsLines = 1; };
+		3044FBB729CE17950013DC65 /* MainWindowPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowPage.swift; sourceTree = "<group>"; };
 		3082935F299CD11D0096752A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		30829362299CD2890096752A /* EncryptedTextEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTextEditView.swift; sourceTree = "<group>"; };
+		30829362299CD2890096752A /* EncryptedTextEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTextEdit.swift; sourceTree = "<group>"; };
 		30829364299CD2E30096752A /* EncryptedTextEditVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTextEditVM.swift; sourceTree = "<group>"; };
 		30829366299CDF4A0096752A /* RoundedCornersShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
 		3082936C299D246C0096752A /* LazyEncryptTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyEncryptTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,9 +73,6 @@
 		30909E842991FC50004599AF /* LazyEncrypt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyEncrypt.entitlements; sourceTree = "<group>"; };
 		30A05CD3299F3914008BD072 /* TextEncyption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEncyption.swift; sourceTree = "<group>"; };
 		30A05CD5299F44A7008BD072 /* CesarsCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipher.swift; sourceTree = "<group>"; };
-		30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherView.swift; sourceTree = "<group>"; tabWidth = 4; };
-		30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherVM.swift; sourceTree = "<group>"; };
-		30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherView.swift; sourceTree = "<group>"; };
 		30A05CE1299FE671008BD072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		30A05CE229A1197F008BD072 /* RichelieuCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichelieuCipher.swift; sourceTree = "<group>"; };
 		30A7656429B46A37008AE3A7 /* ShakeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeAnimation.swift; sourceTree = "<group>"; };
@@ -80,8 +84,16 @@
 		30BF56D129ADB8B400DFD025 /* StringIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringIndex.swift; sourceTree = "<group>"; };
 		30BF56D329ADEB4200DFD025 /* RichelieuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichelieuTests.swift; sourceTree = "<group>"; };
 		30BF56D529ADED3900DFD025 /* CesarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsTests.swift; sourceTree = "<group>"; };
+		30D1DD8F29BC305100C0012F /* CesarsCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarsCipherView.swift; sourceTree = "<group>"; };
+		30D1DD9129BC328000C0012F /* AtbashCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtbashCipherView.swift; sourceTree = "<group>"; };
+		30D1DD9329BC337100C0012F /* GronsfeldCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GronsfeldCipherView.swift; sourceTree = "<group>"; };
+		30D1DD9529BC361000C0012F /* RichelieuCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichelieuCipherView.swift; sourceTree = "<group>"; };
 		30EEB18229B641ED000175A3 /* GronsfeldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GronsfeldTests.swift; sourceTree = "<group>"; };
-		30EEB18429B72794000175A3 /* RichelieuCipherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichelieuCipherView.swift; sourceTree = "<group>"; };
+		30EEB18929B873D1000175A3 /* KeyEncryption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyEncryption.swift; sourceTree = "<group>"; };
+		30EEB18B29B87491000175A3 /* EncryptionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionError.swift; sourceTree = "<group>"; };
+		30EEB18F29B8AC1A000175A3 /* NumberSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberSelector.swift; sourceTree = "<group>"; tabWidth = 1; };
+		30EEB19129B8B00E000175A3 /* SettingsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsGroup.swift; sourceTree = "<group>"; };
+		30EEB19329B8EEC4000175A3 /* KeyEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyEdit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				30829366299CDF4A0096752A /* RoundedCornersShape.swift */,
-				30448EA6299B9C850071BCC5 /* SidebarCollapse.swift */,
 				30BF56D129ADB8B400DFD025 /* StringIndex.swift */,
 				30A7656429B46A37008AE3A7 /* ShakeAnimation.swift */,
 			);
@@ -170,12 +181,9 @@
 		30B2685A299CBE6800A3C2A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				30D1DD8D29BC2F7E00C0012F /* CipherViews */,
+				30EEB18629B87260000175A3 /* Controls */,
 				30909E7D2991FC4D004599AF /* MainWindow.swift */,
-				30829362299CD2890096752A /* EncryptedTextEditView.swift */,
-				30A05CD9299F4CEF008BD072 /* CesarsCipherView.swift */,
-				30A05CDF299FBC69008BD072 /* AtbashCipherView.swift */,
-				30EEB18429B72794000175A3 /* RichelieuCipherView.swift */,
-				303D947A29B1C855000B160E /* GronsfeldCipherView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,7 +193,6 @@
 			children = (
 				30B26862299CBFCF00A3C2A2 /* MainWindowVM.swift */,
 				30829364299CD2E30096752A /* EncryptedTextEditVM.swift */,
-				30A05CDB299F4DD7008BD072 /* CesarsCipherVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -193,16 +200,51 @@
 		30B2685C299CBE8800A3C2A2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				30D1DD8E29BC2F9900C0012F /* Ciphers */,
 				30B2685D299CBF3700A3C2A2 /* SelectedViewItem.swift */,
 				30B26860299CBF7500A3C2A2 /* SelectedViewGroup.swift */,
-				30829375299D25860096752A /* AtbashCipher.swift */,
 				30A05CD3299F3914008BD072 /* TextEncyption.swift */,
+				30A7656829B4F258008AE3A7 /* AlphabetEncryption.swift */,
+				30EEB18929B873D1000175A3 /* KeyEncryption.swift */,
+				30EEB18B29B87491000175A3 /* EncryptionError.swift */,
+				3044FBB729CE17950013DC65 /* MainWindowPage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30D1DD8D29BC2F7E00C0012F /* CipherViews */ = {
+			isa = PBXGroup;
+			children = (
+				30D1DD8F29BC305100C0012F /* CesarsCipherView.swift */,
+				30D1DD9129BC328000C0012F /* AtbashCipherView.swift */,
+				30D1DD9329BC337100C0012F /* GronsfeldCipherView.swift */,
+				30D1DD9529BC361000C0012F /* RichelieuCipherView.swift */,
+				3044FBB529CDF2460013DC65 /* VigenereCipherView.swift */,
+			);
+			path = CipherViews;
+			sourceTree = "<group>";
+		};
+		30D1DD8E29BC2F9900C0012F /* Ciphers */ = {
+			isa = PBXGroup;
+			children = (
+				30829375299D25860096752A /* AtbashCipher.swift */,
 				30A05CD5299F44A7008BD072 /* CesarsCipher.swift */,
 				30A05CE229A1197F008BD072 /* RichelieuCipher.swift */,
 				30A7656629B4F1E9008AE3A7 /* GronsfeldCipher.swift */,
-				30A7656829B4F258008AE3A7 /* AlphabetEncryption.swift */,
+				3044FBB329CDF0390013DC65 /* VigenereCipher.swift */,
 			);
-			path = Models;
+			path = Ciphers;
+			sourceTree = "<group>";
+		};
+		30EEB18629B87260000175A3 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				30829362299CD2890096752A /* EncryptedTextEdit.swift */,
+				30EEB18F29B8AC1A000175A3 /* NumberSelector.swift */,
+				30EEB19129B8B00E000175A3 /* SettingsGroup.swift */,
+				30EEB19329B8EEC4000175A3 /* KeyEdit.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,26 +365,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				30829365299CD2E30096752A /* EncryptedTextEditVM.swift in Sources */,
-				30829363299CD2890096752A /* EncryptedTextEditView.swift in Sources */,
+				30829363299CD2890096752A /* EncryptedTextEdit.swift in Sources */,
+				30EEB18A29B873D1000175A3 /* KeyEncryption.swift in Sources */,
+				3044FBB829CE17950013DC65 /* MainWindowPage.swift in Sources */,
 				30A7656529B46A37008AE3A7 /* ShakeAnimation.swift in Sources */,
-				303D947B29B1C855000B160E /* GronsfeldCipherView.swift in Sources */,
-				30EEB18529B72794000175A3 /* RichelieuCipherView.swift in Sources */,
-				30A05CE0299FBC69008BD072 /* AtbashCipherView.swift in Sources */,
-				30A05CDC299F4DD7008BD072 /* CesarsCipherVM.swift in Sources */,
+				30EEB19229B8B00E000175A3 /* SettingsGroup.swift in Sources */,
 				30BF56D229ADB8B400DFD025 /* StringIndex.swift in Sources */,
+				30EEB19429B8EEC4000175A3 /* KeyEdit.swift in Sources */,
 				30B2685E299CBF3700A3C2A2 /* SelectedViewItem.swift in Sources */,
+				30D1DD9229BC328000C0012F /* AtbashCipherView.swift in Sources */,
+				3044FBB429CDF0390013DC65 /* VigenereCipher.swift in Sources */,
 				30A05CE329A1197F008BD072 /* RichelieuCipher.swift in Sources */,
 				30B26863299CBFCF00A3C2A2 /* MainWindowVM.swift in Sources */,
 				30829367299CDF4A0096752A /* RoundedCornersShape.swift in Sources */,
 				30829376299D25860096752A /* AtbashCipher.swift in Sources */,
+				30EEB19029B8AC1A000175A3 /* NumberSelector.swift in Sources */,
 				30909E7E2991FC4D004599AF /* MainWindow.swift in Sources */,
 				30A7656929B4F258008AE3A7 /* AlphabetEncryption.swift in Sources */,
 				30909E7C2991FC4D004599AF /* LazyEncryptApp.swift in Sources */,
 				30A05CD4299F3914008BD072 /* TextEncyption.swift in Sources */,
 				30A05CD6299F44A7008BD072 /* CesarsCipher.swift in Sources */,
-				30A05CDA299F4CEF008BD072 /* CesarsCipherView.swift in Sources */,
-				30448EA7299B9C850071BCC5 /* SidebarCollapse.swift in Sources */,
+				3044FBB629CDF2460013DC65 /* VigenereCipherView.swift in Sources */,
 				30B26861299CBF7500A3C2A2 /* SelectedViewGroup.swift in Sources */,
+				30EEB18C29B87492000175A3 /* EncryptionError.swift in Sources */,
+				30D1DD9029BC305100C0012F /* CesarsCipherView.swift in Sources */,
+				30D1DD9629BC361000C0012F /* RichelieuCipherView.swift in Sources */,
+				30D1DD9429BC337100C0012F /* GronsfeldCipherView.swift in Sources */,
 				30A7656729B4F1E9008AE3A7 /* GronsfeldCipher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct MainWindow: View {
-    @ObservedObject var viewModel: MainWindowVM = MainWindowVM()
+    @StateObject var viewModel: MainWindowVM = MainWindowVM()
     
     var body: some View {
         NavigationSplitView(sidebar: {
@@ -9,7 +9,12 @@ struct MainWindow: View {
                 if (item.name == "") {
                     ForEach(item.items, id: \.self) { item in
                         HStack{
-                            item.image.foregroundColor(.blue)
+                            item.image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 16,height: 14)
+                                .foregroundColor(.blue)
+                            Spacer().frame(width: 12)
                             Text(item.name)
                         }
                     }
@@ -18,7 +23,12 @@ struct MainWindow: View {
                     Section(item.name) {
                         ForEach(item.items, id: \.self) { item in
                             HStack{
-                                item.image.foregroundColor(.blue)
+                                item.image
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 16,height: 14)
+                                    .foregroundColor(.blue)
+                                Spacer().frame(width: 12)
                                 Text(item.name)
                             }
                         }
@@ -30,29 +40,13 @@ struct MainWindow: View {
             Text("Roman Zheglov, 2023").foregroundColor(.gray)
                 .padding(16)
         }) {
-            switch(viewModel.sidebarSelectedItem?.name) {
-            case String(localized: "The Atbash Cipher"):
-                AtbashCipherView()
-                    .navigationTitle(viewModel.windowTitle)
-            case String(localized: "The Caesar's Cipher"):
-                CesarsCipherView()
-                    .navigationTitle(viewModel.windowTitle)
-            case String(localized: "The Richelieu's Cipher"):
-                RichelieuCipherView()
-                    .navigationTitle(viewModel.windowTitle)
-            case String(localized: "The Gronsfeld's Cipher"):
-                GronsfeldCipherView()
-                    .navigationTitle(viewModel.windowTitle)
-            default:
-                Text("No Editor")
-                    .foregroundColor(.gray)
-                    .font(.title2)
-                    .frame(minWidth: 512)
-            }
+            viewModel.sidebarSelectedItem.view
+                .navigationTitle(viewModel.sidebarSelectedItem.name)
         }
     }
 }
-struct ContentView_Previews: PreviewProvider {
+
+struct MainWindow_Previews: PreviewProvider {
     static var previews: some View {
         MainWindow()
     }

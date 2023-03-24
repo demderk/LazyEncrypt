@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RichelieuError: LocalizedError {
+enum RichelieuError: EncryptionError {
     // Keypart Errors
     case keyKeypartSymbolIsUnreachable(atPosition: Int, blockLength: Int, maxValue: Int)
     case keyKeypartSymbolLessThanZero(atPosition: Int)
@@ -37,7 +37,7 @@ enum RichelieuError: LocalizedError {
         }
     }
 }
-    class RichelieuCipher: TextEncyption {
+    class RichelieuCipher: TextEncyption, KeyEncryption {
         private let regexKey = "([(](\\d+[,]*)+[)])"
         private var key: [[Int]] = []
         
@@ -68,10 +68,10 @@ enum RichelieuError: LocalizedError {
             return try EncryptText(data)
         }
         
-        func parseKey(_ data: String) throws {
+        func setKey(_ key: String) throws {
             let regex = try! NSRegularExpression(pattern: regexKey)
-            let results = regex.matches(in: data, range: NSRange(location: 0, length: data.count))
-            let x = results.map {String(data[Range($0.range, in: data)!])}
+            let results = regex.matches(in: key, range: NSRange(location: 0, length: key.count))
+            let x = results.map {String(key[Range($0.range, in: key)!])}
             var dataParsed: [[Int]] = []
 
             for item in x {
@@ -86,7 +86,7 @@ enum RichelieuError: LocalizedError {
                 dataParsed.append(tempResult)
             }
             
-            guard (x.joined() == data) else{
+            guard (x.joined() == key) else{
                 throw RichelieuError.keySyntaxError
             }
             
@@ -123,6 +123,6 @@ enum RichelieuError: LocalizedError {
                     throw RichelieuError.keyKeypartIsIncomplete(atPosition: n)
                 }
             }
-            key = dataParsed
+            self.key = dataParsed
         }
     }

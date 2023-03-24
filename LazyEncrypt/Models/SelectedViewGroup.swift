@@ -10,5 +10,5 @@ import Foundation
 struct SelectedViewGroup: Identifiable{
     var id = UUID()
     var name: String
-    var items: [SelectedViewItem]
+    var items: [MainWindowPage]
 }

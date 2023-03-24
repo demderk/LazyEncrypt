@@ -8,31 +8,27 @@
 import Foundation
 import SwiftUI
 
+struct MainViewGroup: Identifiable{
+    var id = UUID()
+    var name: String
+    var items: [MainWindowPage]
+}
+
 class MainWindowVM: ObservableObject {
     
-    @Published private(set) var list: [SelectedViewGroup]
-    @Published public var sidebarSelectedItem: SelectedViewItem? = nil
     
+    @Published private(set) var list: [MainViewGroup]
+    @Published public var sidebarSelectedItem: MainWindowPage = .home
+    @Published var cesarsShift: Int = 3
     
     public var windowTitle:String {
-        return sidebarSelectedItem?.name ?? "LazyEncrypt"
+        return sidebarSelectedItem.name 
     }
     
     init() {
-        let mainWindowItem = SelectedViewItem(name: String(localized: "Home Page"), image: Image(systemName: "house"))
-        list = [
-            SelectedViewGroup(name: "", items: [
-                mainWindowItem
-            ]),
-            SelectedViewGroup(name: String(localized: "Base cryptography"), items: [
-                SelectedViewItem(name: String(localized: "The Atbash Cipher"), image: Image(systemName: "arrow.left.arrow.right")),
-                SelectedViewItem(name: String(localized: "The Caesar's Cipher"), image: Image(systemName: "arrow.right.square")),
-                SelectedViewItem(name: String(localized: "The Richelieu's Cipher"), image: Image(systemName: "123.rectangle"))
-            ]),
-            SelectedViewGroup(name: String(localized: "Advanced cryptography"), items: [
-                SelectedViewItem(name: String(localized: "The Gronsfeld's Cipher"), image: Image(systemName: "arrow.down.app"))
-            ])
-        ]
+        list = [MainViewGroup(name: "", items: [.home]),
+                MainViewGroup(name: "Base cryptography", items: [.atbash,.cesars,.richelieu]),
+                MainViewGroup(name: "Advanced cryptography", items: [.gronsfeld, .vigenere])]
     }
     
 }
